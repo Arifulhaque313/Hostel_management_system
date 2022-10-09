@@ -20,14 +20,14 @@
         <PopoverGroup as="nav" class="hidden lg:flex space-x-6 pt-2">
           <div class="" v-for="item in menus" :key="item.name">
             <Link :href=item.href class="text-base font-medium text-gray-500 hover:text-gray-900"> {{ item.name }} </Link>
-          </div>          
+          </div>
         </PopoverGroup>
         <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0 gap-3">
-          
-          
+
+
           <!-- User -->
           <div v-if="$page.props.user"  @click="toggleMenu" class="ml-auto flex items-center gap-2 flex justify-center items-center gap-2 w-auto ml-auto px-4 py-2 text-sm font-medium border border-gray-200 rounded-md hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-gray-700 cursor-pointer">
-            
+
             <div class="ml-1 relative">
               <div>
                 <button type="button" class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" aria-haspopup="true">
@@ -36,9 +36,9 @@
                   <img v-else class="h-8 w-8 rounded-full" src="/images/Avatar.png" alt="" srcset="" />
                 </button>
               </div>
-              
+
               <!-- user admin profile button start  -->
-              <div v-if="$page.props.user.role_id == 1"> 
+              <div v-if="$page.props.user.role_id == 1">
                     <!-- for admin  -->
                     <div v-if="showMenu" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                       <Link :href="route('app.profile.show', $page.props.user.id)" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</Link>
@@ -62,8 +62,8 @@
           <!-- User -->
            <Link  v-else href="/login" class="border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Login</Link>
         </div>
-        
-              
+
+
       </div>
     </div>
 
@@ -74,7 +74,7 @@
             <div class="flex items-center justify-between">
               <div>
                 <img class="h-8 w-auto sm:h-10" src="/images/logo.png" alt="" />
-                
+
               </div>
               <div class="-mr-2">
                 <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -103,9 +103,9 @@
 
                   </div>
                 </div>
-            </div>            
+            </div>
           </div>
-        </div>         
+        </div>
       </PopoverPanel>
     </transition>
   </Popover>

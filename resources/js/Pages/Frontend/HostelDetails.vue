@@ -16,6 +16,7 @@
                         <div class="col-span-12 md:col-span-6">
                             <div class="h-full w-full">
                                 <img :src="`/storage/`+hostel.thumbnail" alt="thumbnail" class="h-2/3 w-full rounded-lg">
+                                <!-- Hello -->
 
                                 <div class="mt-8">
                                     <Link :href="route('hostels.show',hostel.id)">
@@ -25,7 +26,7 @@
                                     </Link>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <!-- right content  -->
                         <div class="col-span-12 md:col-span-6">
@@ -72,7 +73,7 @@
                                         <dt class="text-sm font-medium text-gray-500">Description</dt>
                                         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{hostel.description}}</dd>
                                     </div>
-                                   
+
                                     </dl>
                                 </div>
                                 </div>
@@ -81,7 +82,7 @@
                     </div>
                 </div>
             </section>
-           
+
         </AppLayout>
     </div>
 </template>
@@ -100,17 +101,17 @@ export default{
         hostel:Object
     },
     setup() {
-	
-		return {			
-			
+
+		return {
+
 		}
 	},
-   
+
 }
 </script>
 
 <style scoped>
-.playfair_custom {    
+.playfair_custom {
   font-family: "Playfair Display", serif;
 }
 
