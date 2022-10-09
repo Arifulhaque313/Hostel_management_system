@@ -53,16 +53,45 @@
 							<!-- Settings -->
 							<div class="space-y-1">
 								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(1)">
-									<CogIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
-									<span class="flex-1"> Settings </span>
+									<UserIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
+									<span class="flex-1"> Users </span>
 									<ChevronDownIcon :class="[showSettingsNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
 								</button>
 								<!-- Expandable link section, show/hide based on state. -->
 								<div v-if="showSettingsNav" class="space-y-1 bg-gray-100 rounded-md block">
-									<Link :href="route('app.users.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> Users </Link>
-									<Link :href="route('app.roles.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> Roles </Link>
+									<Link :href="route('app.users.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light">All Users </Link>
 								</div>
 							</div>
+
+								<!-- Hostel start  -->
+							<div class="space-y-1">
+								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(13)">
+									<HomeIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
+									<span class="flex-1">Hostel</span>
+									<ChevronDownIcon :class="[showHostelNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
+								</button>
+								<!-- Expandable link section, show/hide based on state. -->
+								<div v-if="showHostelNav" class="space-y-1 bg-gray-100 rounded-md block">
+									<Link :href="route('app.hostels.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All Hostel </Link>
+								</div>
+							</div>
+							<!-- Hostel end  -->
+
+
+							<!-- Booking start  -->
+							<div class="space-y-1">
+								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(14)">
+									<DocumentAddIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
+									<span class="flex-1">Booking</span>
+									<ChevronDownIcon :class="[showBookNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
+								</button>
+								<!-- Expandable link section, show/hide based on state. -->
+								<div v-if="showBookNav" class="space-y-1 bg-gray-100 rounded-md block">
+									<Link :href="route('app.bookings.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All Bookings </Link>
+								</div>
+							</div>
+							<!-- Hostel end  -->
+
 							<!-- Blogs -->
 							<div class="space-y-1">
 								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(2)">
@@ -90,11 +119,6 @@
 								</div>
 							</div>
 
-							
-						
-
-						
-							
 							
 
 							<!-- notice start  -->
@@ -126,34 +150,7 @@
 
 							<!-- newsletter end  -->
 
-							<!-- Hostel start  -->
-							<div class="space-y-1">
-								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(13)">
-									<NewspaperIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
-									<span class="flex-1">Hostel</span>
-									<ChevronDownIcon :class="[showHostelNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
-								</button>
-								<!-- Expandable link section, show/hide based on state. -->
-								<div v-if="showHostelNav" class="space-y-1 bg-gray-100 rounded-md block">
-									<Link :href="route('app.hostels.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All Hostel </Link>
-								</div>
-							</div>
-							<!-- Hostel end  -->
-
-
-							<!-- Booking start  -->
-							<div class="space-y-1">
-								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(14)">
-									<NewspaperIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
-									<span class="flex-1">Booking</span>
-									<ChevronDownIcon :class="[showBookNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
-								</button>
-								<!-- Expandable link section, show/hide based on state. -->
-								<div v-if="showBookNav" class="space-y-1 bg-gray-100 rounded-md block">
-									<Link :href="route('app.booking.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All Bookings </Link>
-								</div>
-							</div>
-							<!-- Hostel end  -->
+						
 
 
 						</nav>
@@ -166,7 +163,7 @@
 
 <script>
 import {Link} from "@inertiajs/inertia-vue3"
-import {HomeIcon,AnnotationIcon, PencilAltIcon, NewspaperIcon , InformationCircleIcon ,ChatIcon, ChevronDownIcon, CogIcon, ShoppingBagIcon, RssIcon, LightBulbIcon, CollectionIcon, CameraIcon, BookOpenIcon} from "@heroicons/vue/outline"
+import {HomeIcon,UserIcon,AnnotationIcon, DocumentAddIcon,PencilAltIcon, NewspaperIcon , InformationCircleIcon ,ChatIcon, ChevronDownIcon, CogIcon, ShoppingBagIcon, RssIcon, LightBulbIcon, CollectionIcon, CameraIcon, BookOpenIcon} from "@heroicons/vue/outline"
 import {ref} from "vue"
 const menus = [
 	{
@@ -193,7 +190,9 @@ export default {
 		AnnotationIcon,
 		PencilAltIcon,
 		InformationCircleIcon,
-		NewspaperIcon
+		NewspaperIcon,
+		UserIcon,
+		DocumentAddIcon
 	},
 	props: {
 		sidebar: {

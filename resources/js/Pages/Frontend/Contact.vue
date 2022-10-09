@@ -8,8 +8,7 @@
             <section class="bg-white py-5">
                 <div class="my-10 max-w-7xl mx-auto flex flex-col justify-center items-center">
                     <h3 class="playfair_custom font-medium text-[#D1127C] italic text-xl  pb-3 px-4">Contact Us</h3>
-                    <h1 class="playfair_custom font-medium text-2xl px-4 text-center">Our Schools are the Right Fit for Your
-                        Child. We are Near Your Place!</h1>
+                    <h1 class="playfair_custom font-medium text-2xl px-4 text-center">If any problem Then you can contact</h1>
                 </div>
             </section>
             <section class="my-5 max-w-7xl mx-auto grid grid-cols-12 gap-5">
@@ -20,7 +19,7 @@
                         </div>
                         <div class="flex flex-col justify-between px-4">
                             <h3 class="playfair_custom font-medium">Our Location</h3>
-                            <p>241 N. Country Club Road, Suite 1017 Lake Mary FL 32746</p>
+                            <p>Dhanmondi 27, Dhaka, Bangladesh</p>
                         </div>
                     </div>
 
@@ -30,7 +29,7 @@
                         </div>
                         <div class="flex flex-col justify-between px-4">
                             <h3 class="playfair_custom font-medium">Phone Number</h3>
-                            <p>407-330-1135</p>
+                            <p>0184973----</p>
                         </div>
                     </div>
 
@@ -40,7 +39,7 @@
                         </div>
                         <div class="flex flex-col justify-between px-4">
                             <h3 class="playfair_custom font-medium">Email Address</h3>
-                            <p>stellatagliavore@yahoo.com</p>
+                            <p>hostellagbeinfo@gmail.com</p>
                         </div>
                     </div>
                 </div>

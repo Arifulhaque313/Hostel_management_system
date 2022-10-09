@@ -18,7 +18,7 @@
                                 <img :src="`/storage/`+hostel.thumbnail" alt="thumbnail" class="h-2/3 w-full rounded-lg">
 
                                 <div class="mt-8">
-                                    <Link :href="route('hostels.show',hostel.id)">
+                                    <Link :href="route('bookings_create',hostel.id)">
                                         <button class="px-12 py-2 bg-pink-600 text-white font-bold rounded-full">
                                           Book Now
                                         </button>

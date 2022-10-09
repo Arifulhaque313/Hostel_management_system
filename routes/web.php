@@ -1,17 +1,17 @@
 <?php
 
-use App\Http\Controllers\Frontend\HostelController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ShopController;
-use App\Http\Controllers\Frontend\OrderController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\BookHostelController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\NewsletterController;
+use App\Http\Controllers\Frontend\HostelController;
 use App\Models\Hostel;
 
 ;
@@ -45,6 +45,11 @@ Route::middleware([
         $hostels = Hostel::get();
         return Inertia::render('Frontend/Home',['hostels'=>$hostels]);
     })->name('dashboard');
+
+    // booking hostel 
+    // Route::Resource('bookings',BookHostelController::class);
+    Route::get('/create_bookings/{id}',[BookHostelController::class,'create'])->name('bookings_create');
+    Route::post('/store_booking',[BookHostelController::class,'store'])->name('store.booking');
 });
 
 //auth registration 
