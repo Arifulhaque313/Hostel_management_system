@@ -22,7 +22,13 @@
                                         id="" name=""
                                         class="w-full block border pl-3 mt-1 md:w-8/12 md:pr-5 md:py-2 py-1 text-base  md:text-sm rounded-md">
                                         <option value=""></option>
-                                        <option value="uttora">Uttora</option>
+                                        	<option value="dhaka">Dhaka</option>
+                                            <option value="Uttora">Uttora</option>
+                                            <option value="dhanmondi">Dhanmondi</option>
+                                            <option value="panthpath">Panthpath</option>
+                                            <option value="mirpur">Mirpur</option>
+                                            <option value="shabug">Shabug</option>
+                                            <option value="firmgate">Shabug</option>
                                     </select>
                                 </div>
                                 <div class="flex-1 ">
@@ -30,12 +36,33 @@
                                     <div class="flex items-center md:block">
                                         <select id="=rent" name="rent"
                                                 class="flex-grow inline-block border px-2 mt-1 w-6/12 md:w-4/12 md:py-2 py-1 text-base  md:text-sm rounded-md">
-                                            <option v-for="n in 28" :key="n" :value="n+17">{{ n +17 }}</option>
+                                                    <option value=""></option>
+                                                    <option value="1500">1500</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="2500">2500</option>
+                                                    <option value="3000">3000</option>
+                                                    <option value="3500">3500</option>
+                                                    <option value="4000">4000</option>
+                                                    <option value="5000">5000</option>
+                                                    <option value="5500">5500</option>
+                                                    <option value="6000">6000</option>
+                                                    <option value="6500">6500</option>
+                                                    <option value="7000">7000</option>
                                         </select>
                                         <span class="mx-3 md:mx-1">to</span>
                                         <select id="age_to" name="age_from" 
                                                 class="flex-grow inline-block border px-2 mt-1 w-6/12 md:w-4/12 md:py-2 py-1 text-base  md:text-sm rounded-md">
-                                            <option v-for="n in 43" :key="n" :value="n+17">{{ n + 17 }}</option>
+                                                    <option value=""></option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="2500">2500</option>
+                                                    <option value="3000">3000</option>
+                                                    <option value="3500">3500</option>
+                                                    <option value="4000">4000</option>
+                                                    <option value="5000">5000</option>
+                                                    <option value="5500">5500</option>
+                                                    <option value="6000">6000</option>
+                                                    <option value="6500">6500</option>
+                                                    <option value="7000">7000</option>
                                         </select>
                                     </div>
                                 </div>

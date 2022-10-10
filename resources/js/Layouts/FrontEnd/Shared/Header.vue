@@ -60,7 +60,12 @@
             <strong>{{ $page.props.user.name }}</strong>
           </div>
           <!-- User -->
-           <Link  v-else href="/login" class="border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Login</Link>
+          <div v-else>
+              <Link   href="/login" class="border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Login</Link>
+              <Link   href="/register" class="ml-4 border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Sign up</Link>
+
+          </div>
+
         </div>
         
               
@@ -100,7 +105,8 @@
                     <Link :href="route('logout')" method="post" as="button" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</Link>
                   </div>
                   <div v-else>
-                   <Link href="/login" class="border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Login</Link>
+                  <Link href="/login" class="border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Login</Link>
+                  <Link   href="/register" class="ml-4 border-2 border-blue-700 text-blue-800 text-sm px-[22px] py-[6px] rounded-xl font-medium">Sign up</Link>
 
                   </div>
                 </div>

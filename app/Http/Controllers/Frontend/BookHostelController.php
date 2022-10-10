@@ -87,9 +87,8 @@ class BookHostelController extends Controller
             'status' => 2
         ]);
 
-        $id = Auth::user()->id;
-        $my_bookings = BookHostel::where('user_id','=',$id)->with('user','hostel')->get();
-        return Inertia::render('Frontend/MyBooking',['my_bookings'=>$my_bookings]);
+       
+        return Redirect::route('my.booking')->with('success', 'Hostel Book Cancel');
     }
 
     /**

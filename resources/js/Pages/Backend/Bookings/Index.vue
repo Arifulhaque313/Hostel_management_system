@@ -30,7 +30,7 @@
 									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User Phone</th>
 									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hostel Owner name</th>
 									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hostel Id</th>
-									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">trx_id</th>
+									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
 									<th scope="col" class="px-3 py-2 lg:px-6 lg:py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
 								</tr>
 							</thead>
@@ -67,13 +67,15 @@
 									</td>
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="font-bold text-gray-900">
-											{{ book.created_at }}
+											<p v-if="book.status == 0" class="px-6 text-white rounded-full text-sm py-1 bg-cyan-600">Processing</p>
+                                  <p v-if="book.status == 1" class="px-6 text-white rounded-full text-sm py-1 bg-green-600">Confirm</p>
+                                  <p v-if="book.status == 2" class="px-6 text-white rounded-full text-sm py-1 bg-red-600">Rejected/Cancel Booking</p>
 										</div>
 									</td>
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="flex justify-start items-center space-x-2">
 											<button type="button" @click="edit(book.id)">
-												<PencilAltIcon class="h-6 text-green-500" />
+												<EyeIcon class="h-6 text-green-500" />
 											</button>
 											<button type="button" @click="openModel(book.id)">
 												<TrashIcon class="h-6 text-red-500" />
@@ -190,7 +192,7 @@ export default {
 			open.value = true
 		}
 		function edit(id) {
-			Inertia.get(route("app.blog-categories.edit", id))
+			Inertia.get(route("app.bookings.show", id))
 		}
 		function deleteLocation() {
 			Inertia.delete(route("app.hostels.destroy", location_id.value), {

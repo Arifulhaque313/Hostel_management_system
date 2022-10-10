@@ -2252,6 +2252,9 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
+.pl-4 {
+  padding-left: 1rem;
+}
 .pl-11 {
   padding-left: 2.75rem;
 }
@@ -2278,9 +2281,6 @@ select {
 }
 .pl-8 {
   padding-left: 2rem;
-}
-.pl-4 {
-  padding-left: 1rem;
 }
 .text-left {
   text-align: left;

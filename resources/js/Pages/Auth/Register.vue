@@ -30,7 +30,7 @@ const submit = () => {
 		<div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-5 lg:flex-none lg:px-12 xl:px-16 z-10 bg-white shadow-xl rounded-md">
 			<div class="mx-auto w-full max-w-sm lg:w-96">
 				<div class="flex justify-center items-center">
-					<Logo />
+					<h1 class="text-2xl md:text-3xl text-pink-600">Hostel lagbe</h1>
 				</div>
 
 				<div class="mt-8 px-4">

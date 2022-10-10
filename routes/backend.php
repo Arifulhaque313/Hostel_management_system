@@ -53,6 +53,9 @@ Route::resource('hostels', HostelController::class);
 //booking
 Route::resource('bookings', BookHostelController::class);
 
+Route::get('/booking_cancel/{id}',[BookHostelController::class,'booking_cancel'])->name('book.cancel');
+Route::get('/booking_approve/{id}',[BookHostelController::class,'booking_approved'])->name('book.approve');
+
 
 
 

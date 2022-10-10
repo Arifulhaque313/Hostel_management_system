@@ -16,7 +16,9 @@
                         
                         <!-- filter section  -->
                         <div class="flex justify-center my-8 ">
-                            <button class="px-6 py-1 text-xl rounded-full bg-pink-600 text-white">Find the one</button>
+                          <Link :href="route('hostels.index')">
+                             <button class="px-6 py-1 text-xl rounded-full bg-pink-600 text-white">Find the one</button>
+                          </Link>
                         </div>
                     </div>
                   </div>
