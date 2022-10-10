@@ -24,7 +24,7 @@ class CreateBookHostelsTable extends Migration
             $table->string('trx_id');
             $table->string('thumbnail');
             $table->text('description');
-            $table->boolean('status')->default(false);
+            $table->int('status')->default(0);
             $table->string('slug')->nullable();
             $table->timestamps();
         });

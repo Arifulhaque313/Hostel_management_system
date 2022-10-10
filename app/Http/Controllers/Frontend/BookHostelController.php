@@ -75,6 +75,23 @@ class BookHostelController extends Controller
 
     }
 
+    public function mybookings(){
+        $id = Auth::user()->id;
+        $my_bookings = BookHostel::where('user_id','=',$id)->with('user','hostel')->get();
+        return Inertia::render('Frontend/MyBooking',['my_bookings'=>$my_bookings]);
+    }
+
+    public function booking_cancel($id){
+        $hostel = BookHostel::find($id);
+        $hostel->update([
+            'status' => 2
+        ]);
+
+        $id = Auth::user()->id;
+        $my_bookings = BookHostel::where('user_id','=',$id)->with('user','hostel')->get();
+        return Inertia::render('Frontend/MyBooking',['my_bookings'=>$my_bookings]);
+    }
+
     /**
      * Display the specified resource.
      *

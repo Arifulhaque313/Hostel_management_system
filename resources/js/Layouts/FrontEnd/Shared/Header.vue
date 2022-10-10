@@ -51,7 +51,7 @@
               <div v-if="$page.props.user.role_id == 2">
                   <div v-if="showMenu" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                     <Link :href="route('user.profile')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</Link>
-                    <!-- <Link :href="route('app.profile.show', $page.props.user.id)" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Admin Panel</Link> -->
+                    <Link :href="route('my.booking')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">My Bookings</Link>
                     <Link :href="route('logout')" method="post" as="button" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</Link>
                 </div>
               </div>
@@ -96,6 +96,7 @@
                   <div v-if="$page.props.user">
                     <Link :href="route('user.profile')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</Link>
                     <!-- <Link :href="route('app.profile.show', $page.props.user.id)" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Admin Panel</Link> -->
+                    <Link :href="route('my.booking')" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">My Bookings</Link>
                     <Link :href="route('logout')" method="post" as="button" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</Link>
                   </div>
                   <div v-else>

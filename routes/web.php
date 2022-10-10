@@ -50,6 +50,10 @@ Route::middleware([
     // Route::Resource('bookings',BookHostelController::class);
     Route::get('/create_bookings/{id}',[BookHostelController::class,'create'])->name('bookings_create');
     Route::post('/store_booking',[BookHostelController::class,'store'])->name('store.booking');
+    
+    
+    Route::get('/my_bookings',[BookHostelController::class,'mybookings'])->name('my.booking');
+    Route::get('/booking_cancel/{id}',[BookHostelController::class,'booking_cancel'])->name('booking.cancel');
 });
 
 //auth registration 
