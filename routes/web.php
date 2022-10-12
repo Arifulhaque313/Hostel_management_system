@@ -99,6 +99,8 @@ Route::post('/news-store',[NewsletterController::class, 'store'])->name('newslet
 // hostel controller 
 Route::resource('hostels', HostelController::class);
 
+Route::post('/hostels/search',[HostelController::class,'search'])->name('basic.filtration');
+
 
 
 

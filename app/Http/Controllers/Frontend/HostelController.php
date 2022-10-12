@@ -20,4 +20,15 @@ class HostelController extends Controller
         $hostel = Hostel::find($id);
         return Inertia::render('Frontend/HostelDetails',['hostel'=>$hostel]);
     }
+
+
+    public function search(Request $request){
+        $hostel = Hostel::where('area','LIKE','%'.$request->area.'%')
+        ->where('rent', '>=',$request->rent_form)
+        ->where('rent', '<=',$request->rent_to)
+        ->where('type','LIKE','%'.$request->type.'%')
+        
+        ->get();
+        return Inertia::render('Frontend/Hostel',['hostels'=>$hostel]);
+    }
 }

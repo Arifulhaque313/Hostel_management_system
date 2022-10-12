@@ -46,7 +46,7 @@ class HostelController extends Controller
             'title'=>'required|string',
             'owner'=>'required|string',
             'type'=>'required',
-            'owner_num'=>'required|numeric',
+            'owner_num'=>'required|numeric|digits:11',
             'area'=>'required|string',
             'address'=>'required|string',
             'rent'=>'required|numeric',

@@ -77,9 +77,9 @@
 											<button type="button" @click="edit(book.id)">
 												<EyeIcon class="h-6 text-green-500" />
 											</button>
-											<button type="button" @click="openModel(book.id)">
+											<!-- <button type="button" @click="openModel(book.id)">
 												<TrashIcon class="h-6 text-red-500" />
-											</button>
+											</button> -->
 										</div>
 									</td>
 								</tr>
