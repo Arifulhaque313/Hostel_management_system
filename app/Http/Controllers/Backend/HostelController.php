@@ -93,9 +93,12 @@ class HostelController extends Controller
      * @param  \App\Models\Hostel  $hostel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hostel $hostel)
+    public function edit($id)
     {
-        //
+        $hostel=Hostel::where('id',$id)->first();
+        return Inertia::render('Backend/Hostel/Edit',[
+            'hostel' => $hostel,
+        ]);
     }
 
     /**
@@ -105,9 +108,45 @@ class HostelController extends Controller
      * @param  \App\Models\Hostel  $hostel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hostel $hostel)
+    public function update(Request $request,$id)
     {
-        //
+        $hostel=Hostel::where('id',$id)->first();
+        $request->validate([
+            'title'=>'required|string',
+            'owner'=>'required|string',
+            'type'=>'required',
+            'owner_num'=>'required|numeric|digits:11',
+            'area'=>'required|string',
+            'address'=>'required|string',
+            'rent'=>'required|numeric',
+            'description'=>'string',
+            'thumbnail' => 'required|image|mimes:jpg,jpeg,png,gif',
+         ]);
+
+         $image=$request->file('thumbnail');
+         if (isset($image)){
+             $imgName=Str::slug($request->title).uniqid().'.'.$image->getClientOriginalExtension();
+ 
+             if (Storage::disk('public')->exists($hostel->getRawOriginal('thumbnail'))){
+                 Storage::disk('public')->delete($hostel->getRawOriginal('thumbnail'));
+             }
+         }
+
+         $hostel->update([
+            'title' => $request->title,
+            'owner' => $request->owner,
+            'owner_num' => $request->owner_num,
+            'type' => $request->type,
+            'person' => $request->person,
+            'area' => $request->area,
+            'address' => $request->address,
+            'rent' => $request->rent,
+            'description' => $request->description,
+            'slug'=>Str::slug($request->owner),
+            'thumbnail'=>$request->file('thumbnail')->storeAs('hostel',$imgName),
+        ]);
+
+        return Redirect::route('app.hostels.index')->with('success', 'To-Let Post updated');
     }
 
     /**

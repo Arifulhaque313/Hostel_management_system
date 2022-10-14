@@ -13,9 +13,17 @@
                 <!-- filter options  -->
                 <div>
                     <div class="md:max-w-5xl max-w-sm mx-auto bg-white border  bg-opacity-75 items-center rounded-lg md:px-8 py-6 px-6 md:py-4">
-                        
+                        <!-- error massage  -->
+                        <div>
+                             <span v-if="form.errors.area" class="flex items-center justify-center p-2 text-center text-red-700">{{ form.errors.area }}</span>
+					            <span v-if="form.errors.rent_to" class="flex items-center justify-center p-2 text-center text-red-700">{{ form.errors.rent_to }}</span>
+					            <span v-if="form.errors.rent_form" class="flex items-center justify-center p-2 text-center text-red-700">{{ form.errors.rent_form }}</span>
+					            <span v-if="form.errors.type" class="flex items-center justify-center p-2 text-center text-red-700">{{ form.errors.type }}</span>
+
+                        </div>
                         <form action="#">
                             <div class="md:flex w-full space-y-3 md:space-y-0">
+					           
                                 <div class="flex-1">
                                     <label for="looking_for" class="block font-bold text-gray-800 text-sm">Area</label>
                                     <select 
@@ -101,12 +109,13 @@
                             <div class="col-span-12 md:col-span-4 bg-white p-6 rounded-lg border-2"  v-for="(hostel,index) in hostels" :key="index">
                                 <div>
                                     <!-- hostel thumnail  -->
-                                    <div class="">
+                                    <div class="w-full h-48">
                                         <img :src="`/storage/`+hostel.thumbnail" alt="" class="h-full w-full rounded-t-xl">
                                     </div>
                                 
                                     <div class="my-8">
                                         <!-- rent  -->
+                                        <p class="text-lg my-3 text-center font-bold">{{hostel.title}}</p>
                                         <div class="flex justify-between px-4 pb-3">
                                             <p class="font-bold">Room Type : {{hostel.type}}</p>
                                             <p class="font-bold">{{hostel.rent}} <span>TK</span></p>

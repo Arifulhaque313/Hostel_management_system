@@ -122,31 +122,31 @@
 							
 
 							<!-- notice start  -->
-							<div class="space-y-1">
+							<!-- <div class="space-y-1">
 								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(11)">
 									<InformationCircleIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
 									<span class="flex-1"> Notice</span>
 									<ChevronDownIcon :class="[showNoticeNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
 								</button>
-								<!-- Expandable link section, show/hide based on state. -->
+							
 								<div v-if="showNoticeNav" class="space-y-1 bg-gray-100 rounded-md block">
 									<Link :href="route('app.notice.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All Notice </Link>
 								</div>
-							</div>
+							</div> -->
 							<!-- notice end  -->
 
 							<!-- newsletter start  -->
-							<div class="space-y-1">
+							<!-- <div class="space-y-1">
 								<button type="button" class="text-gray-500 hover:bg-light hover:text-primary group w-full flex items-center pl-3 pr-2 py-2 text-left text-sm font-medium rounded-full transition duration-300" aria-controls="sub-menu-2" aria-expanded="false" @click="toggleNavs(12)">
 									<NewspaperIcon class="text-gray-500 group-hover:text-primary mr-3 flex-shrink-0 h-5 w-5" />
 									<span class="flex-1"> News Letter</span>
 									<ChevronDownIcon :class="[showNewsNav ? 'text-primary rotate-180' : 'text-gray-500']" class="ml-3 flex-shrink-0 h-4 w-4 transform group-hover:text-primary transition-all ease-in-out duration-500" />
 								</button>
-								<!-- Expandable link section, show/hide based on state. -->
+					
 								<div v-if="showNewsNav" class="space-y-1 bg-gray-100 rounded-md block">
 									<Link :href="route('app.newsletter.index')" class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary hover:bg-light"> All NewsLetter </Link>
 								</div>
-							</div>
+							</div> -->
 
 							<!-- newsletter end  -->
 

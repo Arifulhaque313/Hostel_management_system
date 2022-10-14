@@ -1,6 +1,6 @@
 <template>
 	<Head>
-		<title>Blog Categories {{ $page.props.APP_NAME }}</title>
+		<title>Hostel {{ $page.props.APP_NAME }}</title>
 		<meta head-key="description" name="description" content="{{ $page.props.APP_DESCRIPTION }}" />
 	</Head>
 	<app-layout>
@@ -193,7 +193,8 @@ export default {
 			open.value = true
 		}
 		function edit(id) {
-			Inertia.get(route("app.blog-categories.edit", id))
+			Inertia.get(route("app.hostels.edit", id))
+			// alert(id);
 		}
 		function deleteLocation() {
 			Inertia.delete(route("app.hostels.destroy", location_id.value), {

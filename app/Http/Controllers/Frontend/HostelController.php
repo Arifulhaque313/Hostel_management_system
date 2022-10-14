@@ -23,6 +23,12 @@ class HostelController extends Controller
 
 
     public function search(Request $request){
+        $request->validate([
+            'area' =>'required',
+            'rent_form' =>'required',
+            'rent_to' =>'required',
+            'type' =>'required',
+        ]);
         $hostel = Hostel::where('area','LIKE','%'.$request->area.'%')
         ->where('rent', '>=',$request->rent_form)
         ->where('rent', '<=',$request->rent_to)

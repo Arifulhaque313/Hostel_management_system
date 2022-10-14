@@ -41,12 +41,13 @@
                             <div class="w-[500px] h-auto bg-white mx-12 my-12 rounded-xl shadow-xl">
                               <div>
                                 <!-- hostel thumnail  -->
-                                <div class="">
+                                <div class="w-full h-48">
                                   <img :src="`/storage/`+hostel.thumbnail" alt="" class="h-full w-full rounded-t-xl">
                                 </div>
                                
                                <div class="my-8">
                                    <!-- rent  -->
+                                  <p class="text-lg my-3 text-center font-bold">{{hostel.title}}</p>
                                   <div class="flex justify-between px-4 pb-3">
                                     <p class="font-bold">Room Type : {{hostel.type}}</p>
                                     <p class="font-bold">{{hostel.rent}} <span>TK</span></p>
